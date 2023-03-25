@@ -39,7 +39,7 @@ try:
 except URLError as e:
    streamlit.error();
 
-streamlit.stop()
+
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
          my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
@@ -50,7 +50,7 @@ if streamlist.button("Get Fruit Load List"):
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows)
    
-streamlit.header("The fruit load list contains:")
-add_my_fruit = streamlit.text_input('What fruit would you like to add','jackfruit')
-streamlit.write('Thanks for adding ', add_my_fruit)
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+# streamlit.header("The fruit load list contains:")
+# add_my_fruit = streamlit.text_input('What fruit would you like to add','jackfruit')
+# streamlit.write('Thanks for adding ', add_my_fruit)
+# my_cur.execute("insert into fruit_load_list values ('from streamlit')")
