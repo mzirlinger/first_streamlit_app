@@ -1,3 +1,4 @@
+import snowflake.connector
 import pandas
 import requests
 import streamlit
